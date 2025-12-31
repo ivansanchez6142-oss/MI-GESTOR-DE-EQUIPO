@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 # --- CONFIGURACIÓN ---
 # Si ya tenés la API Key, pegala acá entre las comillas
- API_KEY = "AIzaSyBlahBlahBlah..."
+API_KEY = "AIzaSyBlahBlahBlah..."
 
 if API_KEY != "TU_API_KEY_AQUÍ":
     genai.configure(api_key=API_KEY)
@@ -34,4 +34,5 @@ if st.button("Pedir táctica"):
     else:
         resp = model.generate_content(f"Armá una táctica para estos jugadores: {st.session_state.equipo}")
         st.write(resp.text)
+
 
