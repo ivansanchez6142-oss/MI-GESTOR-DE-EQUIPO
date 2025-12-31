@@ -1,4 +1,3 @@
-
 import streamlit as st
 import google.generativeai as genai
 
@@ -35,4 +34,3 @@ if st.button("Pedir táctica"):
     else:
         resp = model.generate_content(f"Armá una táctica para estos jugadores: {st.session_state.equipo}")
         st.write(resp.text)
-
